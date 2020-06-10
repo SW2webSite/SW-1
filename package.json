@@ -1,0 +1,35 @@
+{
+  "name": "sw2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SW2webSite/SW2Project.git"
+  },
+  "author": "SWTeam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SW2webSite/SW2Project/issues"
+  },
+  "homepage": "https://github.com/SW2webSite/SW2Project#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^3.2.0",
+    "cors": "^2.8.5",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.7-alpha.3",
+    "express-session": "^1.17.0",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.9.6",
+    "mongoose-extend-schema": "^1.0.0",
+    "multer": "^1.4.2",
+    "path": "^0.12.7"
+  }
+}
