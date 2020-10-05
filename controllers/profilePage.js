@@ -1,12 +1,12 @@
 //jshint esversion:6
-const Category = require('../models/Category');
-module.exports = async function(req, res){
-  try{
-    const Categories = await Category.find({});
-    res.render('profile', {
-      Categories: Categories
-    });
-  }catch(err){
-    console.log(err);
-  }
-}
+const User = require('../models/User');
+
+module.exports = function(req, res){
+  User.findById(req.session.userId, function(err, user){
+    if(user){
+      res.render('profile', {
+        user: user
+      });
+    }
+  });
+};
