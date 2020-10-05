@@ -11,6 +11,7 @@ module.exports = function(req, res){
       req.session.userId = user._id;
       console.log(user);
       req.session.username = user.username;
+      req.session.role = user.role;
       req.session.fullName = user.firstname + ' ' + user.lastname;
       bcrypt.compare(password, user.password, function(err, same){
         if(same){

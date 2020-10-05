@@ -23,25 +23,21 @@
                 <div class="col-md-3">
                   <span><img class="product-image" style="height: 100px; width: 100px;" src="<%= foundCart.items[i].item.img %>"></span>
                 </div>
-
                 <div class="col-md-6">
                   <p class="list-group-item-heading"><%= foundCart.items[i].item.name %></p>
                 </div>
                 <div class="col-md-3">
                   <p>Quantity: <%= foundCart.items[i].quantity %></p>
                   <p>Total Price: <%= foundCart.items[i].price %></p>
-
                   <form method="post" action="/remove-from-cart">
                     <input type="hidden" name="item" value="<%= foundCart.items[i]._id %>">
                     <input type="hidden" name="price" value="<%= foundCart.items[i].price %>">
                     <button type="submit" type="button">Remove</button>
                   </form>
                 </div>
-
               </div>
             </span>
           </div>
-
           <% } %>
 
 

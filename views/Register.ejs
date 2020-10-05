@@ -1,7 +1,9 @@
 <%- include('header') -%>
+    <link rel="stylesheet" href="css\style.css">
+<%- include('nav') -%>
 <div class="col-md-8 order-md-1" >
       <form class="form-signup" novalidate action='/register-user' method="POST" enctype="multipart/form-data">
-          <img class="logo mb-4" src="image\logo.jpeg" alt="" width="120" height="120" >
+          <img class="logo mb-4" src="image/logo.jpeg" alt="" width="120" height="120" >
           <h3 class="h3 mb-3 font-weight-normal">Sign Up</h3>
           <p>Already have an Account  <a href="/login"> login</a></p>
 
@@ -63,5 +65,6 @@
         <button class="btn btn-primary btn-lg btn-block" type="submit" style="background-color:rgba(45,51,83,0.9);">Sign Up</button>
       </form>
 
-
+      <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <%- include('footer')  -%>

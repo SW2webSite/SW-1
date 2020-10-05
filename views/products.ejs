@@ -6,8 +6,8 @@
 <div class="container">
   <div class="row">
     <% for (var i = 0; i < products.length; i++) { %>
-    <a href="/products/<%= products[i]._id %>">
       <div class="col-md-4">
+        <a href="/products/<%= products[i]._id %>">
         <div class="thumbnail">
           <img src="<%= products[i].img %>">
           <div class="caption">
@@ -21,8 +21,8 @@
               <%= products[i].price %> L.E</p>
           </div>
         </div>
+            </a>
       </div>
-    </a>
     <% } %>
   </div>
   <% if (pages > 0) { %>

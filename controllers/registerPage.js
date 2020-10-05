@@ -1,15 +1,10 @@
 //jshint esversion:6
 const Category = require('../models/Category');
 
-module.exports = async function(req, res){
-  try{
-    const Categories = await Category.find({});
+module.exports = function(req, res){
     res.render('Register', {
-      Categories: Categories,
       errors: req.flash('registerationErrors'),
+      cartErrors: req.flash('addingCartErrors'),
       data: req.flash('data')[0]
     });
-  }catch(err){
-    console.log(err);
-  }
-}
+};

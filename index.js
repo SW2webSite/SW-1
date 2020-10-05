@@ -6,7 +6,15 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const cors = require('cors');
 var multer  = require('multer');
-var upload = multer({ dest: './public/image/' });
+var storage = multer.diskStorage({
+    destination: function(req, file, cb) {
+        cb(null, './public/image/');
+     },
+    filename: function (req, file, cb) {
+        cb(null , file.originalname);
+    }
+});
+var upload = multer({ storage: storage });
 
 
 //Controllers
